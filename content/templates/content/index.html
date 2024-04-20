@@ -1,0 +1,259 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Instagram{% endblock%}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'content/css/index.css' %}">
+{% include 'utils/owl-carousel.html' %}
+{% endblock%}
+
+{% block content %}
+    <section class="bg-brand-dark">
+        <div class="bg-brand-dark h-100 position-fixed left-0 top-0 border-color border-end d-sm-block d-none" style="width: 15%">
+            <div class="w-100 my-5">
+                <img class="p-auto px-lg-5 px-md-4" src="{% static 'media/typo-white.png' %}" style="min-width: 35% !important;max-width: 100%">
+            </div>
+            <div class="d-flex flex-column" style="height: 80% !important;">
+            <div class="fs-1-1 side-menu-item py-2 rounded-3 mx-2 my-1">
+                <a href="#" class="text-decoration-none text-white">
+                    <i class="bi bi-house-door-fill ms-2 me-1 fw-bold "></i>
+                    <span class="ms-1 d-md-inline-block d-none">Home</span>
+                </a>
+            </div>
+            <div class="fs-1-1 side-menu-item py-2 rounded-3 mx-2 my-1">
+                <a href="#" class="text-decoration-none text-white">
+                    <i class="bi bi-search ms-2 me-1 fw-bold "></i>
+                    <span class="ms-1 d-md-inline-block d-none">Search</span>
+                </a>
+            </div>
+            <div class="fs-1-1 side-menu-item py-2 rounded-3 mx-2 my-1">
+                <a href="#" class="text-decoration-none text-white">
+                    <i class="bi bi-arrows-fullscreen ms-2 me-1 fw-bold "></i>
+                    <span class="ms-1 d-md-inline-block d-none">Explore</span>
+                </a>
+            </div>
+            <div class="fs-1-1 side-menu-item py-2 rounded-3 mx-2 my-1">
+                <a href="#" class="text-decoration-none text-white">
+                    <i class="bi bi-film ms-2 me-1 fw-bold "></i>
+                    <span class="ms-1 d-md-inline-block d-none">Reels</span>
+                </a>
+            </div>
+            <div class="fs-1-1 side-menu-item py-2 rounded-3 mx-2 my-1">
+                <a href="#" class="text-decoration-none text-white">
+                    <i class="bi bi-send ms-2 me-1 fw-bold "></i>
+                    <span class="ms-1 d-md-inline-block d-none">Messages</span>
+                </a>
+            </div>
+            <div class="fs-1-1 side-menu-item py-2 rounded-3 mx-2 my-1">
+                <a href="#" class="text-decoration-none text-white">
+                    <i class="bi bi-heart ms-2 me-1 fw-bold "></i>
+                    <span class="ms-1 d-md-inline-block d-none">Notification</span>
+                </a>
+            </div>
+            <div class="fs-1-1 side-menu-item py-2 rounded-3 mx-2 my-1">
+                <a data-bs-toggle="modal" data-bs-target="#add-new-post-preloader" class="text-decoration-none text-white">
+                    <i class="bi bi-plus-square ms-2 me-1 fw-bold "></i>
+                    <span class="ms-1 d-md-inline-block d-none">Create</span>
+                </a>
+            </div>
+            <div class="fs-1-1 side-menu-item py-2 rounded-3 mx-2 my-1">
+                <a href="#" class="text-decoration-none text-white">
+                    <i class="bi bi-arrows-fullscreen ms-2 me-1 fw-bold "></i>
+                    <span class="ms-1 d-md-inline-block d-none">Profile</span>
+                </a>
+            </div>
+            <div class="fs-1-1 side-menu-item py-2 rounded-3 mx-2 my-1 mt-auto">
+                <a href="#" class="text-decoration-none text-white">
+                    <i class="bi bi-arrows-fullscreen ms-2 me-1 fw-bold"></i>
+                    <span class="ms-1 d-md-inline-block d-none">Threads</span>
+                </a>
+            </div>
+            <div class="fs-1-1 side-menu-item py-2 rounded-3 mx-2 my-1">
+                <a href="#" class="text-decoration-none text-white">
+                    <i class="bi bi-list ms-2 me-1 fw-bold"></i>
+                    <span class="ms-1 d-md-inline-block d-none">More</span>
+                </a>
+            </div>
+        </div>
+        </div>
+        <div style="width: auto !important;"
+             class="bg-brand-dark h-100 container-fluid">
+            <div class="row justify-content-center align-items-center flex-column">
+                <div class="story-bar col-12 col-sm-6 my-3 row">
+
+                    <div class="d-flex flex-column justify-content-center align-items-center col-lg-1 col-md-2 col-sm-3 col-2">
+                        <div class="user-story rounded-circle" >
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeUFrObNI3MfRkqSnWoayljHcj7O-awGnC9YTOFndTTQ&s"
+                                 style="width: 100%" class="">
+                        </div>
+                        <p class="text-white fs-0-7 my-1">Ronaldo7</p>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center col-lg-1 col-md-2 col-sm-3 col-2">
+                        <div class="user-story rounded-circle" >
+                            <img src="https://media.architecturaldigest.com/photos/637949b3407644b8cdc8947f/1:1/w_2896,h_2896,c_limit/1442809583"
+                                 style="width: 100%" class="">
+                        </div>
+                        <p class="text-white fs-0-7 my-1">Messi10</p>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center col-lg-1 col-md-2 col-sm-3 col-2">
+                        <div class="user-story rounded-circle" >
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6xy41Qq3fCTuXJtXYU1ycHqfWnSLjnHWCWrH9F2pXjQ&s"
+                                 style="width: 100%" class="">
+                        </div>
+                        <p class="text-white fs-0-7 my-1">DaddyTorvalds</p>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center col-lg-1 col-md-2 col-sm-3 col-2">
+                        <div class="user-story rounded-circle" >
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThwesCuiYdtF6eEYxWUrjh0fJeEf6ZaZ2diLRdcLLvQVLEWkjEsVcxTV5XAAwo2cKgEeU&usqp=CAU"
+                                 style="width: 100%" class="">
+                        </div>
+                        <p class="text-white fs-0-7 my-1">Jadi</p>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center col-lg-1 col-md-2 col-sm-3 col-2">
+                        <div class="user-story rounded-circle" >
+                            <img src="https://avatars.githubusercontent.com/u/87280202?v=4"
+                                 style="width: 100%" class="">
+                        </div>
+                        <p class="text-white fs-0-7 my-1">BigDaddy</p>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center col-lg-1 col-md-2 col-sm-3 col-2">
+                        <div class="user-story rounded-circle" >
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeUFrObNI3MfRkqSnWoayljHcj7O-awGnC9YTOFndTTQ&s"
+                                 style="width: 100%" class="">
+                        </div>
+                        <p class="text-white fs-0-7 my-1">Ronaldo7</p>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center col-lg-1 col-md-2 col-sm-3 col-2">
+                        <div class="user-story rounded-circle" >
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeUFrObNI3MfRkqSnWoayljHcj7O-awGnC9YTOFndTTQ&s"
+                                 style="width: 100%" class="">
+                        </div>
+                        <p class="text-white fs-0-7 my-1">Ronaldo7</p>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center col-lg-1 col-md-2 col-sm-3 col-2">
+                        <div class="user-story rounded-circle" >
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeUFrObNI3MfRkqSnWoayljHcj7O-awGnC9YTOFndTTQ&s"
+                                 style="width: 100%" class="">
+                        </div>
+                        <p class="text-white fs-0-7 my-1">Ronaldo7</p>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center col-lg-1 col-md-2 col-sm-3 col-2">
+                        <div class="user-story rounded-circle" >
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeUFrObNI3MfRkqSnWoayljHcj7O-awGnC9YTOFndTTQ&s"
+                                 style="width: 100%" class="">
+                        </div>
+                        <p class="text-white fs-0-7 my-1">Ronaldo7</p>
+                    </div>
+                                    <div class="d-flex flex-column justify-content-center align-items-center col-lg-1 col-md-2 col-sm-3 col-2">
+                        <div class="user-story rounded-circle" >
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6xy41Qq3fCTuXJtXYU1ycHqfWnSLjnHWCWrH9F2pXjQ&s"
+                                 style="width: 100%" class="">
+                        </div>
+                        <p class="text-white fs-0-7 my-1">DaddyTorvalds</p>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center col-lg-1 col-md-2 col-sm-3 col-2">
+                        <div class="user-story rounded-circle" >
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThwesCuiYdtF6eEYxWUrjh0fJeEf6ZaZ2diLRdcLLvQVLEWkjEsVcxTV5XAAwo2cKgEeU&usqp=CAU"
+                                 style="width: 100%" class="">
+                        </div>
+                        <p class="text-white fs-0-7 my-1">Jadi</p>
+                    </div>
+
+                </div>
+
+                {% for i in "0123456789"|make_list %}
+                    <div class="col-12 col-sm-8 col-lg-4 col-md-6 post my-3">
+                    <div class="post-header d-flex align-items-center py-2">
+                        <img style="width: 35px; height: 35px" class="rounded-circle" src="https://avatars.githubusercontent.com/u/87280202?v=4">
+                        <span class="fs-0-8 mx-2 text-white fw-bold">BigDaddy</span> <span class="fs-0-6 text-white-50">12 hour ago</span>
+                        <i class="bi bi-three-dots text-white ms-auto"></i>
+                    </div>
+                    <div class="post-image" style="width: 100%; height: 560px">
+                        <img class="w-100 h-100 rounded img-responsive" src="https://avatars.githubusercontent.com/u/87280202?v=4">
+                    </div>
+                    <div class="post-image-footer d-flex align-items-center text-white fs-4 py-2">
+                        <div>
+                            <i class="bi bi-heart"></i>
+                            <i class="bi bi-chat"></i>
+                            <i class="bi bi-send"></i>
+                        </div>
+                        <i class="bi bi-bookmark ms-auto"></i>
+                    </div>
+                    <div class="post-image-caption fs-0-8">
+                         <span class=" me-2 text-white fw-bold">BigDaddy</span> <span class="text-white">Ever been surprised by the order in which your JavaScript code executes? 🤔 You’re not alone! Join us as we dive into a challenge that’ll have you thinking critically about asynchronous vs. synchronous operations. Share your insights and let’s unravel this code mystery together!</span>
+                        <p class="text-white-50 mt-2">View all 31 comments</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p class="text-white-50 my-0">Add a comment…</p>
+                            <i class="bi bi-emoji-smile text-white-50"></i>
+                        </div>
+                    </div>
+                    <div class="post-separator"></div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div style="width: 25%" class="bg-brand-dark h-100 position-fixed end-0 top-0 border-color border-start d-lg-block d-none">
+    </div>
+    </section>
+
+
+
+
+
+
+<!-- ADD NEW POST Modal media preloader -->
+<div class="modal modal-lg fade" id="add-new-post-preloader" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-brand-dark-50 border-0 px-5 pb-5 justify-content-center align-items-center">
+        <h1 class="modal-title text-white text-center fs-5">Create new post</h1>
+        <button type="button" class="btn-close position-fixed top-0 end-0 m-3 text-white bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body bg-brand-dark-50 d-flex flex-column justify-content-center align-items-center p-5">
+        <i class="bi bi-collection-play text-white-50 text-white display-1"></i>
+        <p class="text-white">Drag photos and videos here</p>
+          <input type="file" name="media-preloader"
+                 accept="image/*"
+                 class="btn btn-primary d-none"
+                 id="post-media-preloader"
+                 multiple=""
+                 required="">
+
+          <label class="btn btn-primary" for="post-media-preloader">
+            {{ form.media.label }}
+          </label>
+      </div>
+      <div class="modal-footer bg-brand-dark-50 border-0 p-5">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADD NEW POST detail -->
+<div class="modal modal-xl fade" id="add-new-post" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <button type="button" class="btn-close position-fixed top-0 end-0 m-3 text-white bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal-content">
+      <div class="modal-header bg-brand-dark-50 border-0 pb-5 justify-content-between align-items-center">
+        <h1 class="modal-title text-white  fs-5">Create new post</h1>
+        <button class="modal-title btn btn-primary fs-5">share</button>
+      </div>
+      <div class="modal-body bg-brand-dark-50 row justify-content-center align-items-center p-5">
+        <div class="col-8">
+            <div id="post-media-slider-container" style="width: 100%; height: 300px !important;" class="owl-carousel owl-theme">
+            </div>
+        </div>
+        <div class="col-4"> second</div>
+      </div>
+      <div class="modal-footer bg-brand-dark-50 border-0 p-5">
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock%}
+
+{% block script %}
+    <script src="{% static 'content/js/add-new-post.js' %}"></script>
+{% endblock%}

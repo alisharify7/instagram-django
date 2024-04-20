@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Login • Instagram{% endblock title %}
+
+{% block style %}
+    <style>
+    .form-control{
+        background-color: var(--bs-secondary-bg);
+    }
+    </style>
+{% endblock style %}
+
+{% block content %}
+    <section>
+        <div class="container-fluid">
+            <div class="row flex-column justify-content-center align-items-center">
+
+                <div class="col-md-3 col-lg-2 col-sm-11 col-12 border-dark-50 border mt-5 p-5 p-md-4">
+                    {% include 'components/alert.html' %}
+                    <div class="card-header-register d-flex flex-column justify-content-center align-items-center">
+                        <img style="width: 70%" class="p-1 my-3" src="{% static 'media/typo.png' %}">
+                    </div>
+
+                    <form class="mt-1" method="post" action="{{ form.action }}">
+                        {% csrf_token %}
+                        {{ form.EmailOrPhone }}
+                        {{ form.Password }}
+                        <input type="submit" class="btn btn-primary w-100 fs-0-8 my-3" value="{{ form.SubmitText }}">
+                    </form>
+
+                    <div class="seprator d-flex justify-content-center align-items-center my-1">
+                        <hr class="bg-dark w-100">
+                        <span class="text-muted px-3  fw-bold fs-0-9"> OR </span>
+                        <hr class="bg-dark w-100">
+                    </div>
+                    <div class="text-center fs-0-9 mt-3">
+                        <p class="text-primary"><i class="bi bi-facebook"></i> Log in with Facebook</p>
+                        <a class="text-muted fs-0-8 text-decoration-none" href="#">forgot password?</a>
+                    </div>
+
+                </div>
+                <div class="col-md-3 col-lg-2 col-sm-11 col-12 border-dark-50 border my-2 px-4 py-3">
+                    <p class="text-center my-2 fs-0-9">Don't have an account? ? <a href="{% url 'auth:register-view' %}" class="text-decoration-none">Sing up</a></p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-sm-11 col-12 my-2">
+                    <p class="text-center m-0 fs-0-9">Get the app</p>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img style="width: 50%" src="{% static 'media/getit-from-google-play.png' %}" class="p-1">
+                        <img style="width: 50%" src="{% static 'media/getit-from-microsoft-store.png' %}" class="p-3">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            {% include 'components/auth/footer.html' %}
+        </div>
+    </section>
+{% endblock content %}
+
+{% block script %}
+{% endblock script %}

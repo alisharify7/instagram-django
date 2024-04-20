@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Login Account
+{% endblock %}
+
+{% block style %}
+{% endblock %}
+
+{% block body %}
+<h1 class="fw-bold">Login</h1>
+<form action="{{form.action}}" method="POST">
+    {% csrf_token %}
+    <div class="alert alert-danger">
+        {{form.errors}}
+    </div>
+    <label class="w-100 my-3">
+        {{form.username.label}}
+        {{form.username}}
+    </label>
+    <label class="w-100 my-3">
+        {{form.password.label}}
+        {{form.password}}
+    </label>
+    <button class="btn btn-primary" type="submit">
+        Login
+    </button>
+</form>
+{% endblock %}
+
+{% block script %}
+{% endblock %}

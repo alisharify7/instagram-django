@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Register Account
+{% endblock %}
+
+{% block style %}
+{% endblock %}
+
+{% block body %}
+<h1 class="fw-bold">Register New User</h1>
+<form action="{{form.action}}" method="POST">
+    {% csrf_token %}
+    <div class="alert alert-danger">
+        {{form.errors}}
+    </div>
+    <label class="w-100 my-3">
+        {{form.username.label}}
+        {{form.username}}
+    </label>
+    <label class="w-100 my-3">
+        {{form.email.label}}
+        {{form.email}}
+    </label>
+    <label class="w-100 my-3">
+        {{form.password.label}}
+        {{form.password}}
+    </label>
+    <label class="w-100 my-3">
+        {{form.password_confirm.label}}
+        {{form.password_confirm}}
+    </label>
+    <button class="btn btn-primary" type="submit">
+        Register
+    </button>
+</form>
+{% endblock %}
+
+{% block script %}
+{% endblock %}

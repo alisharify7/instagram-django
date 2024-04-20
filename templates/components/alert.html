@@ -1,0 +1,23 @@
+{% if messages %}
+
+    {% for message in messages %}
+
+        <div class="fs-0-9 alert alert-{% if message.tags == "error" %}danger{% else %}{{message.tags}}{% endif %} alert-dismissable fade show d-flex justify-content-between align-items-center" role="alert">
+            <div>
+                {% if message.tags == "success" %}
+                    <i class="bi bi-check-circle"></i>
+                {% elif message.tags == "warning" %}
+                    <i class="bi bi-exclamation-triangle"></i>
+                {% elif message.tags == "error" %}
+                    <i class="bi bi-x-circle"></i>
+                {% endif %}
+                <strong class="ms-1">Hey!</strong>
+                <p  style="word-break: break-all" class="text-justify">{{ message }}</p>
+            </div>
+
+          <button type="button" class="btn-close p-3" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+    {% endfor %}
+
+{% endif%}
